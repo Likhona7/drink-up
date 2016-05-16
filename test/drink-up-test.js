@@ -112,7 +112,7 @@ describe("", function(){
   var vee =  { name: 'Lesego', drink: 0 };
 
       var result = drink_up.least(Monday,"coffee");
-    assert.equal(result, vee)
+    assert.deepEqual(result, vee)
   })
 
   // it("Who drank the most tea on Tuesday ", function(){
@@ -126,14 +126,19 @@ describe("", function(){
   //      assert.equal(result, vee)
   // })
   it("Who drank the least water on Wednesday", function() {
-  vee =  {
-    "person": "Lesego",
-    "water": 4,
-    "coffee": 0,
-    "tea": 3
-  }
-  var result = drink_up.least(Wednesday,"water");
-  assert.equal(result,vee )
-})
+  vee = { name: 'Brenda', drink: 4 };
 
+  var result = drink_up.least(Wednesday,"water");
+  assert.deepEqual(result,vee )
+})
+it("Who drank the least coffee on Thursday",function(){
+  vee =   {name: "Lesego", drink: 0};
+  var result = drink_up.least(Thursday,"coffee");
+  assert.deepEqual(result, vee)
+})
+it("Who drank the least water on Thursday", function(){
+vee = {name: "Brenda", drink:1};
+var result = drink_up.least(Thursday,"water");
+assert.deepEqual(result, vee)
+})
 })
