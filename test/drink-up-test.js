@@ -106,7 +106,7 @@ describe("Write one function that answers these three questions.", function() {
   })
 })
 
-describe("", function(){
+describe("Write new function(s) that answer Least and Most", function(){
 
   it("Who drank the least coffee on Monday", function() {
   var vee =  { name: 'Lesego', drink: 0 };
@@ -114,28 +114,31 @@ describe("", function(){
       var result = drink_up.least(Monday,"coffee");
     assert.deepEqual(result, vee)
   })
+it("Who drank the most tea on Tuesday", function(){
+var vee = { name: 'Brenda', drink: 4};
 
-  // it("Who drank the most tea on Tuesday ", function(){
-  //   var vee = {
-  //     "person": "Brenda",
-  //     "tea": 4,
-  //     "water": 0,
-  //     "coffee": 2
-  //   }
-  //     var result = drink_up.Maximum(Tuesday,"tea");
-  //      assert.equal(result, vee)
-  // })
+  var result = drink_up.most(Tuesday, "tea");
+  assert.deepEqual(result, vee)
+})
+
   it("Who drank the least water on Wednesday", function() {
-  vee = { name: 'Brenda', drink: 4 };
+  vee = { name: 'Brenda', drink: 4};
 
   var result = drink_up.least(Wednesday,"water");
   assert.deepEqual(result,vee )
 })
 it("Who drank the least coffee on Thursday",function(){
-  vee =   {name: "Lesego", drink: 0};
+  var vee =   {name: "Lesego", drink: 0};
   var result = drink_up.least(Thursday,"coffee");
   assert.deepEqual(result, vee)
 })
+it("Who drank the most tea on Thursday", function(){
+
+var vee = {name: "Lesego", drink: 4};
+var result = drink_up.most(Thursday, "tea");
+assert.deepEqual(result, vee)
+})
+
 it("Who drank the least water on Thursday", function(){
 vee = {name: "Brenda", drink:1};
 var result = drink_up.least(Thursday,"water");

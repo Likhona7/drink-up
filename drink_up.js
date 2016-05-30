@@ -15,10 +15,9 @@ exports.howMany = function(day, drink) {
   }
   ///////////////////////////////////////////////////////////////////////
 
-
 exports.least = function(day, minDrink) {
 
-  var min = 1000;
+  var min = Infinity;
   var person = " ";
     var person1 = {};
   day.forEach(function(m) {
@@ -27,17 +26,34 @@ exports.least = function(day, minDrink) {
       min = m[minDrink];
       person = m["person"];
 
-
-
     }
   })
   person1.name = person
   person1.drink = min
-  console.log(person1)
-
+  console.log(person1,"min")
 
   return person1;
+}
 
 
+exports.most = function(day, maxDrink){
+var max = -Infinity;
+var person = " ";
+var person1 = {};
+day.forEach(function(m){
+
+  if(m[maxDrink] > max){
+
+max = m[maxDrink];
+    person = m["person"];
+  }
+
+
+})
+person1.name = person
+person1.drink = max
+console.log(person1,"max");
+
+return person1;
 
 }
