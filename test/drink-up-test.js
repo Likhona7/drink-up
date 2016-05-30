@@ -144,4 +144,11 @@ vee = {name: "Brenda", drink:1};
 var result = drink_up.least(Thursday,"water");
 assert.deepEqual(result, vee)
 })
+
+})
+describe("THE SEQUEL: PER PERSON", function(){
+it("How many coffees did Lesego drink on Monday", function(){
+
+
+})
 })
